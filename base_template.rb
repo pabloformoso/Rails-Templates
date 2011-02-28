@@ -1,22 +1,22 @@
 run "echo TODO > README"
 
 run "echo Cleaning up files..."
-apply "/Volumes/Proyectos/templates/template_cleanup.rb"
+apply "./template_cleanup.rb"
 
 run "echo Configuring JS..."
-apply "/Volumes/Proyectos/templates/template_js.rb"
+apply "./template_js.rb"
 
 run "echo Configuring log rotator..."
-apply "/Volumes/Proyectos/templates/template_log_rotator.rb"
+apply "./template_log_rotator.rb"
 
 run "echo Chosing ORM system..."
-apply "/Volumes/Proyectos/templates/template_orm.rb"
+apply "./template_orm.rb"
 
 run "echo Configuring Git..."
-apply "/Volumes/Proyectos/templates/template_git.rb"
+apply "./template_git.rb"
 
 run "echo Configuring Capistrano"
-apply "/Volumes/Proyectos/templates/template_capistrano.rb"
+apply "./template_capistrano.rb"
 
 # require gems
 gem 'cucumber-rails'
