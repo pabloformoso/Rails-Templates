@@ -1,22 +1,24 @@
+TEMPLATE_PATH = File.dirname("base_template.rb")
+
 run "echo TODO > README"
 
 run "echo Cleaning up files..."
-apply "./template_cleanup.rb"
+apply "#{TEMPLATE_PATH}/template_cleanup.rb"
 
 run "echo Configuring JS..."
-apply "./template_js.rb"
+apply "#{TEMPLATE_PATH}/template_js.rb"
 
 run "echo Configuring log rotator..."
-apply "./template_log_rotator.rb"
+apply "#{TEMPLATE_PATH}/template_log_rotator.rb"
 
 run "echo Chosing ORM system..."
-apply "./template_orm.rb"
+apply "#{TEMPLATE_PATH}/template_orm.rb"
 
 run "echo Configuring Git..."
-apply "./template_git.rb"
+apply "#{TEMPLATE_PATH}/template_git.rb"
 
 run "echo Configuring Capistrano"
-apply "./template_capistrano.rb"
+apply "#{TEMPLATE_PATH}/template_capistrano.rb"
 
 # require gems
 gem 'cucumber-rails'
