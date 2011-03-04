@@ -1,4 +1,5 @@
-TEMPLATE_PATH = File.dirname("base_template.rb")
+# Your path here
+TEMPLATE_PATH = "/Users/pablo/Dropbox/Proyectos/Rails-Templates"
 
 run "echo TODO > README"
 
