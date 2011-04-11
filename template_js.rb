@@ -4,7 +4,7 @@
 run 'mkdir public/uploads && chmod 777 public/uploads'
 run 'mkdir public/ui'
 
-ask_js = ask("\r\n\r\nWhat javascript framework do you want to use?\r\n\r\n(1) Prototype\r\n(2) jQuery\r\n(3) MooTools\r\n(4) RightJS")
+ask_js = ask("\r\n\r\nWhat javascript framework do you want to use?\r\n\r\n(1) Prototype\r\n(2) jQuery\r\n(3) MooTools\r\n(4) RightJS\r\n")
 if ["1", "2", "3", "4"].include?(ask_js)
   @prototype  = (ask_js=="1")
   @jquery     = (ask_js=="2")
@@ -25,7 +25,7 @@ if !@prototype
 end
 
 if @jquery
-  run "curl -L http://jqueryjs.googlecode.com/files/jquery-1.2.6.min.js > public/javascripts/jquery.js"
+  run "curl -L https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js > public/javascripts/jquery.js"
 end
 
 if @mootools

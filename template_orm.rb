@@ -1,7 +1,7 @@
 #----------------------------------------------------------------------------
 # Database
 #----------------------------------------------------------------------------
-ask_db_type = ask("\r\n\r\nWhich database type would you like to use?\r\n\r\n(1) SQLite\r\n(2) MySQL\r\n(3) PostgreSQL\r\n(4) MongoDB")
+ask_db_type = ask("\r\n\r\nWhich database type would you like to use?\r\n\r\n(1) SQLite\r\n(2) MySQL\r\n(3) PostgreSQL\r\n(4) MongoDB\r\n(1..4):")
 if ["1", "2", "3", "4"].include?(ask_db_type)
   sqlite   = (ask_db_type=="1")
   mysql    = (ask_db_type=="2")
@@ -26,6 +26,10 @@ else
 end
 
 db_name = ask("\r\n\r\nWhat should I call the database?\r\n\r\n(Leave blank to use application name)")
+
+
+gem 'mysql2' if mysql
+ 
  
 if sqlite
   file 'config/database.yml', <<-CODE

@@ -3,7 +3,7 @@
 #----------------------------------------------------------------------------
 gem "devise"
 
-ask_devise = ask("\r\n\r\nWhat to create User profile no? (yes/no)")
+ask_devise = ask("\r\n\r\nWhat to create User profile no? \r\n(yes/no):")
 if ask_devise == "yes"
   run 'rails g devise:install'
   run 'rails g devise User'

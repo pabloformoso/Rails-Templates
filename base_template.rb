@@ -26,8 +26,6 @@ gem 'cucumber-rails'
 gem 'database_cleaner'
 gem 'capybara'
 
-gem 'mysql2'
-
 gem "meta_where"
 gem "meta_search"
 
